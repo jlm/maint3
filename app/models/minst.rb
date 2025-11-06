@@ -1,0 +1,2 @@
+class Minst < ApplicationRecord
+end

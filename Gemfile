@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "rails", "~> 8.1.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
-# Consise template language for Rails views [https://github.com/slim-template/slim]
+# Concise template language for Rails views [https://github.com/slim-template/slim]
 gem "slim"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"

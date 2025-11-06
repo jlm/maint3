@@ -2,8 +2,8 @@
 # check=error=true
 
 # This Dockerfile is designed for production, not development. Use with Kamal or build'n'run by hand:
-# docker build -t hw_modal_example .
-# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name hw_modal_example hw_modal_example
+# docker build -t maint3 .
+# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name maint3 maint3
 
 # For a containerized dev environment, see Dev Containers: https://guides.rubyonrails.org/getting_started_with_devcontainer.html
 

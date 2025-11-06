@@ -22,13 +22,13 @@ default: &default
 
 development:
   <<: *default
-  database: hw_dev
+  database: maint3_dev
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: hw_modal_example
+  #username: maint3
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -82,17 +82,17 @@ production:
   primary: &primary_production
     <<: *default
     database: hw_prod
-    username: <%= ENV["HW_MODAL_EXAMPLE_DATABASE_USERNAME"] %>
-    password: <%= ENV["HW_MODAL_EXAMPLE_DATABASE_PASSWORD"] %>
+    username: <%= ENV["MAINT3_DATABASE_USERNAME"] %>
+    password: <%= ENV["MAINT3_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
-    database: hw_prod_cache
+    database: maint3_prod_cache
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
-    database: hw_prod_queue
+    database: maint3_prod_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_production
-    database: hw_prod_cable
+    database: maint3_prod_cable
     migrations_paths: db/cable_migrate

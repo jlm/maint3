@@ -18,3 +18,12 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.navbar {
+    --_op-navbar-background-color: darkgray;
+    --_op-navbar-text-color: white;
+}
+
+.app__content {
+    padding-top: var(--op-space-medium);
+}

@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
     @items = @items.open if params[:open].present?
     @items = @items.closed if params[:closed].present?
     @items = @items.review if params[:review].present?
-    @items = @items.joins(:minst).where("minsts.code = ?", params[:cat]) if params[:cat].present?
 
     @qualifier = if params[:open].present?
                    "Open"

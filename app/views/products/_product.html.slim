@@ -1,7 +1,0 @@
--# locals: (product:)
-
-tr data-testid=dom_id(product)
-  td = product.name
-  td.flex.gap-sm
-    = link_to 'Edit', [:edit, product], class: 'btn btn--primary', data: { turbo_frame: 'modal' }
-    = button_to 'Delete', product, method: :delete, class: 'btn btn--destructive', data: { turbo_confirm: 'Are you sure?' }

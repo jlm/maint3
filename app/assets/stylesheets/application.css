@@ -27,3 +27,12 @@
 .app__content {
     padding-top: var(--op-space-medium);
 }
+
+small.status {
+    color: rgb(0,255,0);
+}
+
+.sortlink {
+    text-decoration: none;
+    font-weight: bold;
+}

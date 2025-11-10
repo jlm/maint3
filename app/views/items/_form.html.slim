@@ -1,0 +1,19 @@
+-# locals: (model:)
+
+= form_for model do |f|
+  .form__group
+    = f.label :number
+    = f.text_field :number, class: 'form-control'
+    = tag.p(f.object.errors[:number].join(', '), class: 'form-error') if f.object.errors[:number].any?
+  .form__group
+    = f.label :latest_status
+    = f.text_field :latest_status, class: 'form-control'
+  .form__group
+    = f.label :date, "Submitted"
+    = f.date_field :date, class: 'form-control'
+  .form__group
+    = f.label :standard
+    = f.text_field :standard, class: 'form-control'
+
+  = content_for :modal_footer do
+    = f.submit 'Save', class: 'btn btn--primary', form: f.id

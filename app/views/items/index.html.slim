@@ -1,0 +1,18 @@
+- provide(:title, "Items")
+.flex.justify-between
+  .header__title
+    h1 Items
+  .header__actions
+    = link_to "New Item", new_item_path, class: 'btn', data: { turbo_frame: 'modal' }
+
+table.table
+  thead: tr
+    th = sortable("number")
+    th Status
+    th = sortable("date", "Submitted")
+    th = sortable("standard")
+    th = sortable("clause")
+    th Subject
+    th = sortable("draft", "Draft with fix")
+  tbody
+    = render @items

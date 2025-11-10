@@ -36,3 +36,12 @@ small.status {
     text-decoration: none;
     font-weight: bold;
 }
+
+.wide {
+    width: 100%;
+    padding-left: var(--op-space-small);
+}
+
+.vspace {
+    padding-top: var(--op-space-medium);
+}

@@ -1,7 +1,10 @@
 - provide(:title, "Items")
-.flex.justify-between
+nav.breadcrumbs
+  div.card.wide
+    span.breadcrumbs__text = @qualifier + " " + Maint3::Config::Committee + " Maintenance Items"
+.vspace.flex.justify-between
   .header__title
-    h1 Items
+    h1 = @qualifier + " " + Maint3::Config::Committee + " Maintenance Items"
   .header__actions
     = link_to "New Item", new_item_path, class: 'btn', data: { turbo_frame: 'modal' }
 

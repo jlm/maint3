@@ -4,5 +4,6 @@
 module Maint3
   class Config
     Importing = false
+    Committee = "802.1"
   end
 end

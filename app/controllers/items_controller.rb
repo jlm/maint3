@@ -3,9 +3,27 @@ class ItemsController < ApplicationController
   helper_method :sort_column, :sort_direction
   def index
     @items = Item.order("#{sort_column} #{sort_direction}")
+    @items = @items.open if params[:open].present?
+    @items = @items.closed if params[:closed].present?
+    @items = @items.review if params[:review].present?
+    @items = @items.joins(:minst).where("minsts.code = ?", params[:cat]) if params[:cat].present?
+
+    @qualifier = if params[:open].present?
+                   "Open"
+    elsif params[:closed].present?
+                   "Closed"
+    elsif params[:review].present?
+                   "Review"
+    elsif params[:search].present?
+                   ""
+    else
+                   "All"
+    end
   end
 
   def show
+    @minutes = @item.minutes.date_valid.joins(:meeting).order(:date, :id)
+    @request = @item.request
   end
 
   def new

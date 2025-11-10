@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   CLOSED_CODES = %w[P J W]
   scope :closed, -> { joins(:minst).where("minsts.code IN (?)", CLOSED_CODES) }
   scope :open, -> { joins(:minst).where.not("minsts.code IN (?)", CLOSED_CODES) }
-  scope :review, -> { joins(:minst).where.not("minsts.code IN (?)", CLOSED_CODES + ["V"]) }
+  scope :review, -> { joins(:minst).where.not("minsts.code IN (?)", CLOSED_CODES + [ "V" ]) }
 
   def is_closed?
     minst && (CLOSED_CODES.include? minst.code)

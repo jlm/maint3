@@ -5,8 +5,7 @@ module ApplicationHelper
     css_class = "sortlink"
     css_class += column == sort_column ? " current #{sort_direction}" : ""
     direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
-    link_to title, {sort: column, direction: direction, open: params[:open], closed: params[:closed]},
-            {class: css_class}
+    link_to title, { sort: column, direction: direction, open: params[:open], closed: params[:closed] },
+            { class: css_class }
   end
-
 end
